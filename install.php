@@ -27,11 +27,11 @@ adminpass=$(mysql -N -e "use XPbot; select username from admins where permission
 clear
 
 echo -e "\nPlease input Domain (https://xbot.example.com)"
-printf "IP: "
+printf "Domain: "
 read ip
 if [ -n "$ip" -a "$ip" == " " ]; then
 echo -e "\nPlease input Domain (https://xbot.example.com)"
-printf "IP: "
+printf "Domain: "
 read ip
 fi
 adminusername=admin
