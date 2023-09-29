@@ -151,7 +151,8 @@ mysql -e "ALTER USER '${adminusername}'@'localhost' IDENTIFIED BY '${adminpasswo
 wait
 sed -i "s/DB_USERNAME=.*/DB_USERNAME=$adminusername/g" /var/www/html/app/.env
 sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=$adminpassword/g" /var/www/html/app/.env
-
+cd /var/www/html/app
+php artisan migrate
 if [ -n "$adminuser" -a "$adminuser" != "NULL" ]
 then
  mysql -e "USE XPbot; UPDATE admins SET username = '${adminusername}' where permission='admin';"
