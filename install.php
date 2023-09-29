@@ -156,7 +156,6 @@ if [ -n "$adminuser" -a "$adminuser" != "NULL" ]
 then
  mysql -e "USE XPbot; UPDATE admins SET username = '${adminusername}' where permission='admin';"
  mysql -e "USE XPbot; UPDATE admins SET password = '${adminpassword}' where permission='admin';"
- mysql -e "USE XPbot; UPDATE settings SET ssh_port = '1' where id='1';"
 else
 mysql -e "USE XPbot; INSERT INTO admins (username, password, permission, credit, status) VALUES ('${adminusername}', '${adminpassword}', 'admin', '', 'active');"
 mysql -e "USE XPbot; INSERT INTO settings (lang_panel, lang_bot, pay_validate, json_validate) VALUES ('en', 'en', '', '');"
