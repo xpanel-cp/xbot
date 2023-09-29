@@ -77,7 +77,7 @@ apt autoremove -y
 apt install php8.1 php8.1-mysql php8.1-xml php8.1-curl cron -y
 fi
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer    
-linkd=https://github.com/xpanel-cp/xbot/releases/download/1.0/XBot-v1.zip
+linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/1.0
 link=$(sudo curl -Ls "$linkd" | grep '"browser_download_url":' | sed -E 's/.*"([^"]+)".*/\1/')
 sudo wget -O /var/www/html/update.zip $link
 sudo unzip -o /var/www/html/update.zip -d /var/www/html/ &
