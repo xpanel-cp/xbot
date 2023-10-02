@@ -6,8 +6,6 @@
 <h1 align="center"/>XBot</h1>
 <h6 align="center">XPanel Shopping Telegram Bot<h6>
 <p align="center">
-<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/xpanel-cp/xbot/total">
-<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/xbot">
 <a href="https://t.me/Xpanelssh" target="_blank">
 <img alt="Telegram Channel" src="https://img.shields.io/endpoint?label=Channel&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2FXpanelssh&color=blue">
 </a>
