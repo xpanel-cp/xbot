@@ -60,7 +60,6 @@
 :green_circle: پشتیبانی از زبان فارسی و انگلیسی در پنل و ربات<br>
 :green_circle: فعال سازی حالت روز/شب<br>
 
-:green_circle: [مولتی سرور](https://github.com/xpanel-cp/Xcs-Multi-Management-XPanel) <br>
 
 ## Telegram Channel:
 https://t.me/Xpanelssh
