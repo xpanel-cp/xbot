@@ -70,7 +70,11 @@ https://t.me/Xpanelssh
 
 
 # نصب
+برای نصب کافیست دستور زیر را وارد کنید<br>
 
+```
+bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/xbot/main/install.sh --ipv4)
+```
 
 **سیستم عامل مورد نیاز**
 
