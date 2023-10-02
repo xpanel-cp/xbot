@@ -74,7 +74,9 @@ https://t.me/Xpanelssh
 bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/xbot/main/install.sh --ipv4)
 ```
 <br>
-ست کردن وبهوک تلگرام:<br>
+
+**ست کردن وبهوک تلگرام:** 
+<br>
 https://api.telegram.org/bot{token}/setWebhook?url=https://sub.domain.com/api/bot <br>
 {token}:همان توکن ربات شما <br>
 sub.domain.com: دامنه یا ساب دامنه ای که روی پنل تنظیم کرده اید
