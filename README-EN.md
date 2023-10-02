@@ -86,3 +86,8 @@ Please note that you should upgrade server resources according to the number of 
 
 ## Enabling SSL
 To enable SSL on the domain, use popular CDNs such as Cloudflare and select the "flexible" option in the SSL/TLS settings.
+
+<br>
+<picture>
+<img alt="XBot" src="https://github.com/xpanel-cp/xbot/blob/main/xbot.jpg">
+</picture>
