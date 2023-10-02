@@ -11,7 +11,13 @@ if [ "$EUID" -ne 0 ]
 then echo "Please run as root"
 exit
 fi
+ENV_FILE="/var/www/html/app/.env"
+COPY_FILE="/var/www/html/.env_copy"
 
+if [ -f "$ENV_FILE" ]; then
+  cp "$ENV_FILE" "$COPY_FILE"
+  chmod 644 /var/www/html/.env_copy
+fi
 # php7.x is End of life https://www.php.net/supported-versions.php ubuntu bellow 20 is not supported by php8.1 in 2023
 if [ "$(uname)" == "Linux" ]; then
     version_info=$(lsb_release -rs)
@@ -190,9 +196,42 @@ wait
 (crontab -l | grep . ; echo -e "* * * * * /var/www/html/cron.sh") | crontab -
 (crontab -l ; echo "0 2 * * * wget -q -O /dev/null '${ipv4}/fixer/remove' > /dev/null 2>&1") | crontab -
 
+DEFAULT_APP_LOCALE=en
+DEFAULT_APP_MODE=light
+DEFAULT_PANEL_DIRECT=cp
+DEFAULT_XBOT_TOKEN=none
+
+if [ -f /var/www/html/.env_copy ]; then
+  while IFS= read -r line; do
+    key=$(echo "$line" | awk -F'=' '{print $1}')
+    value=$(echo "$line" | awk -F'=' '{print $2}')
+
+    if [ "$key" = "APP_LOCALE" ]; then
+      APP_LOCALE="$value"
+    elif [ "$key" = "APP_MODE" ]; then
+      APP_MODE="$value"
+    elif [ "$key" = "PANEL_DIRECT" ]; then
+      PANEL_DIRECT="$value"
+    elif [ "$key" = "XBOT_TOKEN" ]; then
+      CRON_TRAFFIC="$value"
+
+    fi
+  done < /var/www/html/.env_copy
+fi
+
+APP_LOCALE="${APP_LOCALE:-$DEFAULT_APP_LOCALE}"
+APP_MODE="${APP_MODE:-$DEFAULT_APP_MODE}"
+PANEL_DIRECT="${PANEL_DIRECT:-$DEFAULT_PANEL_DIRECT}"
+XBOT_TOKEN="${XBOT_TOKEN:-$DEFAULT_XBOT_TOKEN}"
+
+sed -i "s/APP_LOCALE=.*/APP_LOCALE=$APP_LOCALE/g" /var/www/html/app/.env
+sed -i "s/APP_MODE=.*/APP_MODE=$APP_MODE/g" /var/www/html/app/.env
+sed -i "s/PANEL_DIRECT=.*/PANEL_DIRECT=$PANEL_DIRECT/g" /var/www/html/app/.env
+sed -i "s/XBOT_TOKEN=.*/XBOT_TOKEN=$XBOT_TOKEN/g" /var/www/html/app/.env
+
 clear
 
 echo -e "************ XPbot ************ \n"
-echo -e "XBot Link : ${ipv4}/cp/login"
+echo -e "XBot Link : ${ipv4}/${PANEL_DIRECT}/login"
 echo -e "Username : ${adminusername}"
 echo -e "Password : ${adminpassword}"
