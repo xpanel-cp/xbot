@@ -90,5 +90,5 @@ Ubuntu 18+ (پیشنهادی :Ubuntu 20)<br>
 جهت فعال سازی SSL روی دامنه از CDN های معروف مانند Cloudflare استفاده کنید و در بخش تنظیمات SSL/TLS گزینه flexible را انتخاب کنید.
 <br>
 <picture>
-<img alt="XBot" src="https://github.com/xpanel-cp/xbot/blob/main/demo.jpg">
+<img alt="XBot" src="https://github.com/xpanel-cp/xbot/blob/main/xbot.jpg">
 </picture>
