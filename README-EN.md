@@ -77,6 +77,7 @@ https://api.telegram.org/bot{token}/setWebhook?url=https://sub.domain.com/api/bo
 <br>
 {token}: Your bot's token<br>
 sub.domain.com: The domain or subdomain you have configured in your panel
+<br>
 
 **Required Operating System**
 
