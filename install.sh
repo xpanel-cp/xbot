@@ -57,6 +57,15 @@ fi
 
 ipv4=$ip
 
+echo -e "\nPlease input Lang en/fa"
+printf "Lang: "
+read lang
+if [ -n "$ip" -a "$ip" == " " ]; then
+echo -e "\nPlease input Lang en/fa"
+printf "Lang: "
+read lang
+fi
+
 if command -v apt-get >/dev/null; then
 
 sudo NEETRESTART_MODE=a apt-get update --yes
@@ -196,7 +205,7 @@ wait
 (crontab -l | grep . ; echo -e "* * * * * /var/www/html/cron.sh") | crontab -
 (crontab -l ; echo "0 2 * * * wget -q -O /dev/null '${ipv4}/fixer/remove' > /dev/null 2>&1") | crontab -
 
-DEFAULT_APP_LOCALE=en
+DEFAULT_APP_LOCALE="$lang"
 DEFAULT_APP_MODE=light
 DEFAULT_PANEL_DIRECT=cp
 DEFAULT_XBOT_TOKEN=none
