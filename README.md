@@ -64,7 +64,7 @@ https://t.me/Xpanelssh
 
 ## لایسنس
 پنل به صورت تجاری ارائه می شود و لایسنس روی دامنه صادر می شود امکان تغییر دامنه نیز فراهم می باشد (تهیه لایسنس و تغییر دامنه از طریق ربات تلگرامی XBot) <BR>
-<b><a href="https://t.me/xpanel_bot" target="_blank">تهیه لایسنس</a>
+<b><a href="https://t.me/xpanel_bot" target="_blank">تهیه لایسنس</a></b>
 
 
 # نصب
@@ -73,6 +73,11 @@ https://t.me/Xpanelssh
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/xbot/main/install.sh --ipv4)
 ```
+<br>
+ست کردن وبهوک تلگرام:<br>
+https://api.telegram.org/bot{token}/setWebhook?url=https://sub.domain.com/api/bot <br>
+{token}:همان توکن ربات شما <br>
+sub.domain.com: دامنه یا ساب دامنه ای که روی پنل تنظیم کرده اید
 
 **سیستم عامل مورد نیاز**
 
