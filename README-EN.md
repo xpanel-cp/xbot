@@ -72,7 +72,8 @@ To install, simply enter the following command:<br>
 bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/xbot/main/install.sh --ipv4)
 ```
 <br>
-Setting up a Telegram webhook:<br>
+
+**Setting up a Telegram webhook:** <br>
 https://api.telegram.org/bot{token}/setWebhook?url=https://sub.domain.com/api/bot
 <br>
 {token}: Your bot's token<br>
