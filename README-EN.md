@@ -32,7 +32,9 @@
   - [Enabling SSL](#enabling-ssl)<br>
  
 ## Introduction <br>
-The XPanel Shopping Robot, known as XBot, provides users of XPanel with a Telegram bot for managing subscription sales. This panel is for commercial use and is provided with a license.
+The XPanel Shopping Robot, known as XBot, provides users of XPanel with a Telegram bot for managing subscription sales. This panel is for commercial use and is provided with a license. <b>
+
+<b><a href="https://t.me/xpanel_bot" target="_blank">Obtain License</a>
 
 ## Features <br>
 :green_circle: Display and list users who have used the bot <br>
