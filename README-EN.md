@@ -76,7 +76,7 @@ Setting up a Telegram webhook:<br>
 https://api.telegram.org/bot{token}/setWebhook?url=https://sub.domain.com/api/bot
 <br>
 {token}: Your bot's token<br>
-sub.domain.com: The domain or subdomain you have configured in your panel<br>
+sub.domain.com: The domain or subdomain you have configured in your panel<br><br>
 
 **Required Operating System**
 
