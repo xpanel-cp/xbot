@@ -42,6 +42,7 @@ The XPanel Shopping Robot, known as XBot, provides users of XPanel with a Telegr
 :green_circle: Ability to define capacity for each server <br>
 :green_circle: Ability to define an unlimited number of packages <br>
 :green_circle: List all transactions made <br>
+:green_circle: wallet <br>
 :green_circle: Send a public message to all users <br>
 :green_circle: Define and customize different sections of the bot <br>
 :green_circle: Provide a test account (optional) <br>
