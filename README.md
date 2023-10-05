@@ -41,6 +41,7 @@
 :green_circle: امکان تعریف ظرفیت برای هر سرور<br>
 :green_circle: امکان تعریف بی نهایت پکیج<br>
 :green_circle: لیست بندی کلیه تراکنش های صورت گرفته<br>
+:green_circle: کیف پول<br>
 :green_circle: ارسال پیام عمومی به کلیه کاربران<br>
 :green_circle: تعریف و تنظیم متن بخش های مختلف ربات<br>
 :green_circle: ارائه اکانت تست (انتخابی)<br>
