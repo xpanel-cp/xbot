@@ -91,6 +91,9 @@ apt remove php -y
 apt autoremove -y
 apt install php8.1 php8.1-mysql php8.1-xml php8.1-curl cron -y
 fi
+sed -i 's@zend_extension = /usr/local/ioncube/ioncube_loader_lin_8.1.so@@' /etc/php/8.1/cli/php.ini
+bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/xbot/main/ioncube.sh --ipv4)
+
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer    
 linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/1.0
 link=$(sudo curl -Ls "$linkd" | grep '"browser_download_url":' | sed -E 's/.*"([^"]+)".*/\1/')
