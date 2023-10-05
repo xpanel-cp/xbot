@@ -56,7 +56,7 @@ adminpassword=${passwordtmp}
 fi
 
 ipv4=$ip
-
+Lang=fa
 echo -e "\nPlease input Lang en/fa"
 printf "Lang: "
 read lang
