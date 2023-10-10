@@ -239,6 +239,8 @@ chmod +x /var/www/html/cron.sh
 wait
 (crontab -l | grep . ; echo -e "* * * * * /var/www/html/cron.sh") | crontab -
 (crontab -l ; echo "0 2 * * * wget -q -O /dev/null '${ipv4}/fixer/remove' > /dev/null 2>&1") | crontab -
+(crontab -l ; echo "0 1 * * * wget -q -O /dev/null '${ipv4}/fixer/notif' > /dev/null 2>&1") | crontab -
+
 
 DEFAULT_APP_LOCALE="$lang"
 DEFAULT_APP_MODE=light
