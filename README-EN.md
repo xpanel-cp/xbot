@@ -59,6 +59,11 @@ The XPanel Shopping Robot, known as XBot, provides users of XPanel with a Telegr
 :green_circle: Change the admin panel login path <br>
 :green_circle: Support for Persian and English languages in the panel and bot <br>
 :green_circle: Activate day/night mode <br>
+:green_circle: Informing the admin about card-to-card transaction <br>
+:green_circle: Informing the user about the confirmation of the card-to-card transaction <br>
+:green_circle: Ability to choose a preferred username for the subscription <br>
+:green_circle: Mandatory membership in the channel <br>
+:green_circle: Ability to add manual configurations by the user <br>
 
 ## Telegram Channel:
 https://t.me/Xpanelssh
