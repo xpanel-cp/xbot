@@ -246,6 +246,7 @@ DEFAULT_APP_LOCALE="$lang"
 DEFAULT_APP_MODE=light
 DEFAULT_PANEL_DIRECT=cp
 DEFAULT_XBOT_TOKEN=none
+DEFAULT_XBOT_ID_ADMIN=
 
 if [ -f /var/www/html/.env_copy ]; then
   while IFS= read -r line; do
@@ -259,7 +260,9 @@ if [ -f /var/www/html/.env_copy ]; then
     elif [ "$key" = "PANEL_DIRECT" ]; then
       PANEL_DIRECT="$value"
     elif [ "$key" = "XBOT_TOKEN" ]; then
-      CRON_TRAFFIC="$value"
+      XBOT_TOKEN="$value"
+      elif [ "$key" = "XBOT_ID_ADMIN" ]; then
+      XBOT_ID_ADMIN="$value"
 
     fi
   done < /var/www/html/.env_copy
@@ -269,11 +272,13 @@ APP_LOCALE="${APP_LOCALE:-$DEFAULT_APP_LOCALE}"
 APP_MODE="${APP_MODE:-$DEFAULT_APP_MODE}"
 PANEL_DIRECT="${PANEL_DIRECT:-$DEFAULT_PANEL_DIRECT}"
 XBOT_TOKEN="${XBOT_TOKEN:-$DEFAULT_XBOT_TOKEN}"
+XBOT_ID_ADMIN="${XBOT_ID_ADMIN:-$DEFAULT_XBOT_ID_ADMIN}"
 
 sed -i "s/APP_LOCALE=.*/APP_LOCALE=$APP_LOCALE/g" /var/www/html/app/.env
 sed -i "s/APP_MODE=.*/APP_MODE=$APP_MODE/g" /var/www/html/app/.env
 sed -i "s/PANEL_DIRECT=.*/PANEL_DIRECT=$PANEL_DIRECT/g" /var/www/html/app/.env
 sed -i "s/XBOT_TOKEN=.*/XBOT_TOKEN=$XBOT_TOKEN/g" /var/www/html/app/.env
+sed -i "s/XBOT_ID_ADMIN=.*/XBOT_ID_ADMIN=$XBOT_ID_ADMIN/g" /var/www/html/app/.env
 
 clear
 
