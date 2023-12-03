@@ -107,6 +107,7 @@ sudo apt-get -y install software-properties-common
 sudo add-apt-repository ppa:ondrej/php -y
 apt-get install apache2 zip unzip net-tools curl mariadb-server -y
 apt-get install php php-cli php-mbstring php-dom php-pdo php-mysql -y
+apt install php8.1 php8.1-mysql php8.1-xml php8.1-curl php8.1-mbstring cron -y
 apt-get install npm -y
 sudo apt-get install coreutils
 wait
@@ -121,13 +122,12 @@ sudo apt-get purge '^php7.*' -y
 apt remove php* -y
 apt remove php -y
 apt autoremove -y
-apt install php8.1 php8.1-mysql php8.1-xml php8.1-curl cron -y
 fi
 sed -i 's@zend_extension = /usr/local/ioncube/ioncube_loader_lin_8.1.so@@' /etc/php/8.1/cli/php.ini
 bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/xbot/main/ioncube.sh --ipv4)
 
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer    
-linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/1.3
+linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/1.4
 link=$(sudo curl -Ls "$linkd" | grep '"browser_download_url":' | sed -E 's/.*"([^"]+)".*/\1/')
 sudo wget -O /var/www/html/update.zip $link
 sudo unzip -o /var/www/html/update.zip -d /var/www/html/ &
@@ -179,6 +179,7 @@ wait
 sudo /etc/init.d/apache2 reload
 sudo service apache2 restart
 chown www-data:www-data /var/www/html/bot/* &
+chown www-data:www-data /var/www/html/bot/bk/db &
 wait
 systemctl restart mariadb &
 wait
