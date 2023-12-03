@@ -34,6 +34,8 @@
 این پنل استفاده تجاری دارد و با لایسنس ارائه می شود.
 
 ## امکانات <br>
+:green_circle: اتصال به XPanel (SSH direct,SSH dropbear, SSH tls, SSH websocket) <br>
+:green_circle: اتصال به Sanaei (Vmess,Vless,Trojan,Shadowsocks) <br>
 :green_circle: نمایش و لیست کاربرانی که ربات را اجرا کرده اند <br>
 :green_circle: فعال/غیرفعال سازی دسترسی کاربر<br>
 :green_circle: لیست بندی کلیه فروش های انجام شده<br>
@@ -62,8 +64,13 @@
 :green_circle: اطلاع رسانی تائید تراکنش کارت به کارت به کاربر<br>
 :green_circle: امکان انتخاب نام کاربری دلخواه برای اشتراک<br>
 :green_circle: عضویت اجباری در کانال<br>
-:green_circle: امکان افزودن کانفیگ دستی توسط کاربر<br>
+:green_circle: امکان افزودن کانفیگ دستی توسط کاربر (xpanel)<br>
+:green_circle: نمایندگی با درصد تخفیف<br>
+:green_circle: تنظیم منو ربات از پنل<br>
 
+
+https://github.com/xpanel-cp/XPanel-SSH-User-Management <br>
+https://github.com/MHSanaei/3x-ui <br>
 
 ## Telegram Channel:
 https://t.me/Xpanelssh
