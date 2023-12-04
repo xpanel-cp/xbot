@@ -35,35 +35,40 @@ The XPanel Shopping Robot, known as XBot, provides users of XPanel with a Telegr
 <b><a href="https://t.me/xpanel_bot" target="_blank">Obtain License</a></b>
 
 ## Features <br>
-:green_circle: Display and list users who have used the bot <br>
-:green_circle: Enable/disable user access <br>
+:green_circle: Connect to XPanel (SSH direct, SSH dropbear, SSH tls, SSH websocket) <br>
+:green_circle: Connect to Sanaei (Vmess, Vless, Trojan, Shadowsocks) <br>
+:green_circle: Display and list users who have executed the bot <br>
+:green_circle: Enable/Disable user access <br>
 :green_circle: List all completed sales <br>
-:green_circle: Ability to define an unlimited number of servers <br>
+:green_circle: Ability to define an infinite number of servers <br>
 :green_circle: Ability to define capacity for each server <br>
-:green_circle: Ability to define an unlimited number of packages <br>
-:green_circle: List all transactions made <br>
-:green_circle: wallet <br>
+:green_circle: Ability to define an infinite number of packages <br>
+:green_circle: List all transactions that have taken place <br>
+:green_circle: Wallet <br>
 :green_circle: Send a public message to all users <br>
-:green_circle: Define and customize different sections of the bot <br>
+:green_circle: Define and set text for different sections of the bot <br>
 :green_circle: Provide a test account (optional) <br>
-:green_circle: Force users to enter their mobile number (optional) <br>
-:green_circle: Enable guide for connecting on different platforms (Android, iOS, Linux, Windows) <br>
+:green_circle: Mandatory entry of mobile number (optional) <br>
+:green_circle: Activate the connection guide for different platforms (Android, iOS, Linux, Windows) <br>
 :green_circle: Display connection ports (optional) <br>
-:green_circle: Extend subscriptions (optional) <br>
-:green_circle: Do not display servers with full capacity in the sales category (optional) <br>
+:green_circle: Extend subscription (optional) <br>
+:green_circle: Do not display servers that have reached capacity in the sales category (optional) <br>
 :green_circle: Delete expired accounts after 4 days (optional) <br>
-:green_circle: Activate the digital currency payment gateway <a href="https://plisio.net/account/signup?ref=28752" target="_blank">(plisio.net)</a> (optional) <br>
-:green_circle: Activate bank card deposits (optional) <br>
-:green_circle: Activate USD to Iranian Rial currency conversion (optional) <br>
-:green_circle: Backup capability <br>
+:green_circle: Activate digital currency payment gateway <a href="https://plisio.net/account/signup?ref=28752" target="_blank">(plisio.net)</a> (optional) <br>
+:green_circle: Activate card-to-card transfers (optional) <br>
+:green_circle: Activate USD to Toman currency conversion (optional) <br>
+:green_circle: Ability to take backups <br>
 :green_circle: Change the admin panel login path <br>
 :green_circle: Support for Persian and English languages in the panel and bot <br>
 :green_circle: Activate day/night mode <br>
-:green_circle: Informing the admin about card-to-card transaction <br>
-:green_circle: Informing the user about the confirmation of the card-to-card transaction <br>
-:green_circle: Ability to choose a preferred username for the subscription <br>
-:green_circle: Mandatory membership in the channel <br>
-:green_circle: Ability to add manual configurations by the user <br>
+:green_circle: Notify the admin of card-to-card transaction confirmation <br>
+:green_circle: Notify the user of card-to-card transaction approval <br>
+:green_circle: Ability to choose a custom username for subscription <br>
+:green_circle: Mandatory membership in a channel <br>
+:green_circle: Ability for users to add manual configurations (xpanel) <br>
+:green_circle: Agency with a percentage discount <br>
+:green_circle: Set the bot menu from the panel <br>
+:green_circle: Backup every 12 hours from xpanel servers <br>
 
 ## Telegram Channel:
 https://t.me/Xpanelssh
