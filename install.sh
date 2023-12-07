@@ -127,7 +127,7 @@ sed -i 's@zend_extension = /usr/local/ioncube/ioncube_loader_lin_8.1.so@@' /etc/
 bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/xbot/main/ioncube.sh --ipv4)
 
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer    
-linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/1.5
+linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/1.6
 link=$(sudo curl -Ls "$linkd" | grep '"browser_download_url":' | sed -E 's/.*"([^"]+)".*/\1/')
 sudo wget -O /var/www/html/update.zip $link
 sudo unzip -o /var/www/html/update.zip -d /var/www/html/ &
@@ -179,7 +179,8 @@ wait
 sudo /etc/init.d/apache2 reload
 sudo service apache2 restart
 chown www-data:www-data /var/www/html/bot/* &
-chown www-data:www-data /var/www/html/bot/bk/db &
+chown www-data:www-data /var/www/html/bot/bk/* &
+chown www-data:www-data /var/www/html/bot/bk/db/* &
 wait
 systemctl restart mariadb &
 wait
