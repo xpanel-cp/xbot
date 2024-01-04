@@ -30,6 +30,8 @@ fi
 
 adminuser=$(mysql -N -e "use XPbot; select username from admins where permission='admin';")
 adminpass=$(mysql -N -e "use XPbot; select username from admins where permission='admin';")
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
 clear
 
 echo -e "\nPlease input Domain (https://xbot.example.com)"
@@ -290,7 +292,8 @@ sed -i "s/APP_MODE=.*/APP_MODE=$APP_MODE/g" /var/www/html/app/.env
 sed -i "s/PANEL_DIRECT=.*/PANEL_DIRECT=$PANEL_DIRECT/g" /var/www/html/app/.env
 sed -i "s/XBOT_TOKEN=.*/XBOT_TOKEN=$XBOT_TOKEN/g" /var/www/html/app/.env
 sed -i "s/XBOT_ID_ADMIN=.*/XBOT_ID_ADMIN=$XBOT_ID_ADMIN/g" /var/www/html/app/.env
-
+wait
+sudo systemctl restart apache2
 clear
 
 echo -e "************ XPbot ************ \n"
