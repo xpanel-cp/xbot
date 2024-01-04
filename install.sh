@@ -108,6 +108,10 @@ sudo add-apt-repository ppa:ondrej/php -y
 apt-get install apache2 zip unzip net-tools curl mariadb-server -y
 apt-get install php php-cli php-mbstring php-dom php-pdo php-mysql -y
 apt install php8.1 php8.1-mysql php8.1-xml php8.1-curl php8.1-mbstring cron -y
+sudo apt-get install php8.1-imagick -y
+sudo apt-get install php8.1-gd -y
+sudo apt-get install imagemagick -y
+sudo apt-get install graphicsmagick -y
 apt-get install npm -y
 sudo apt-get install coreutils
 wait
@@ -127,7 +131,7 @@ sed -i 's@zend_extension = /usr/local/ioncube/ioncube_loader_lin_8.1.so@@' /etc/
 bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/xbot/main/ioncube.sh --ipv4)
 
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer    
-linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/1.7
+linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/1.8
 link=$(sudo curl -Ls "$linkd" | grep '"browser_download_url":' | sed -E 's/.*"([^"]+)".*/\1/')
 sudo wget -O /var/www/html/update.zip $link
 sudo unzip -o /var/www/html/update.zip -d /var/www/html/ &
@@ -159,7 +163,10 @@ echo "<VirtualHost *:80>
     CustomLog /access.log combined
     <Directory '/var/www/html/bot'>
     AllowOverride All
+    php_admin_value memory_limit 2048M
     </Directory>
+    php_value upload_max_filesize 500M
+    php_value post_max_size 500M
 </VirtualHost>
 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet" > /etc/apache2/sites-available/000-default.conf
