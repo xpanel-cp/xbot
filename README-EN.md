@@ -69,6 +69,7 @@ The XPanel Shopping Robot, known as XBot, provides users of XPanel with a Telegr
 :green_circle: Agency with a percentage discount <br>
 :green_circle: Set the bot menu from the panel <br>
 :green_circle: Backup every 12 hours from xpanel servers <br>
+:green_circle: Connection QR Code for SSH, V2Ray subscriptions<br>
 
 https://github.com/xpanel-cp/XPanel-SSH-User-Management <br>
 https://github.com/MHSanaei/3x-ui <br>
