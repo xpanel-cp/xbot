@@ -68,6 +68,7 @@
 :green_circle: نمایندگی با درصد تخفیف<br>
 :green_circle: تنظیم منو ربات از پنل<br>
 :green_circle: بکاپ گیری 12 ساعت یکبار از سرورهای xpanel<br>
+:green_circle: QRode  اتصال برای اشتراک ssh , v2ray<br>
 
 
 https://github.com/xpanel-cp/XPanel-SSH-User-Management <br>
