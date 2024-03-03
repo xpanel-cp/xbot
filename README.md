@@ -69,6 +69,12 @@
 :green_circle: نمایندگی با درصد تخفیف<br>
 :green_circle: تنظیم منو ربات از پنل<br>
 :green_circle: بکاپ گیری 12 ساعت یکبار از سرورهای xpanel<br>
+:green_circle: امکان تنظیم دامنه تانل در بخش سرور<br>
+:green_circle: ارسال ویدئو در پیام عمومی<br>
+:green_circle: تنظیم ویدئو در منو های شخصی<br>
+:green_circle: نمایش لایو مصرف cpu & ram<br>
+:green_circle: اضافه شدن زبان روسی<br>
+:green_circle: QRode  اتصال برای اشتراک ssh , v2ray<br>
 :green_circle: QRode  اتصال برای اشتراک ssh , v2ray<br>
 :green_circle: استفاده از درگاه پرداخت ایرانی به همراه پلاگین وردپرس<br>
 
