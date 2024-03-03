@@ -33,7 +33,21 @@ adminpass=$(mysql -N -e "use XPbot; select username from admins where permission
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 clear
-
+echo -e "${YELLOW}************ Select Xbot Version************"
+  echo -e "${GREEN}  1)Xbot v2.0"
+  echo -e "${GREEN}  2)Xbot v1.9"
+  echo -ne "${GREEN}\nSelect Version : ${ENDCOLOR}"
+  read n
+  if [ "$n" != "" ]; then
+    if [ "$n" == "1" ]; then
+      linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/2.0.0
+    fi
+    if [ "$n" == "2" ]; then
+      linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/1.9
+    fi
+  else
+   linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/2.0.0
+  fi
 echo -e "\nPlease input Domain (https://xbot.example.com)"
 printf "Domain: "
 read ip
@@ -133,7 +147,6 @@ sed -i 's@zend_extension = /usr/local/ioncube/ioncube_loader_lin_8.1.so@@' /etc/
 bash <(curl -Ls https://raw.githubusercontent.com/xpanel-cp/xbot/main/ioncube.sh --ipv4)
 
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer    
-linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/2.0.0
 link=$(sudo curl -Ls "$linkd" | grep '"browser_download_url":' | sed -E 's/.*"([^"]+)".*/\1/')
 sudo wget -O /var/www/html/update.zip $link
 sudo unzip -o /var/www/html/update.zip -d /var/www/html/ &
