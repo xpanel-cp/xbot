@@ -75,7 +75,6 @@
 :green_circle: نمایش لایو مصرف cpu & ram<br>
 :green_circle: اضافه شدن زبان روسی<br>
 :green_circle: QRode  اتصال برای اشتراک ssh , v2ray<br>
-:green_circle: QRode  اتصال برای اشتراک ssh , v2ray<br>
 :green_circle: استفاده از درگاه پرداخت ایرانی به همراه پلاگین وردپرس<br>
 :green_circle: امکان اتصال به سیستم مدیریت اکانت IBsng<br>
 
