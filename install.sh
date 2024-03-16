@@ -34,19 +34,23 @@ sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 clear
 echo -e "${YELLOW}************ Select Xbot Version************"
-  echo -e "${GREEN}  1)Xbot v2.0"
-  echo -e "${GREEN}  2)Xbot v1.9"
+  echo -e "${GREEN}  1)Xbot v2.1"
+  echo -e "${GREEN}  2)Xbot v2.0"
+  echo -e "${GREEN}  3)Xbot v1.9"
   echo -ne "${GREEN}\nSelect Version : ${ENDCOLOR}"
   read n
   if [ "$n" != "" ]; then
     if [ "$n" == "1" ]; then
+      linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/2.1
+    fi
+    if [ "$n" == "2" ]; then
       linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/2.0.0
     fi
     if [ "$n" == "2" ]; then
       linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/1.9
     fi
   else
-   linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/2.0.0
+   linkd=https://api.github.com/repos/xpanel-cp/xbot/releases/tags/2.1
   fi
 echo -e "\nPlease input Domain (https://xbot.example.com)"
 printf "Domain: "
