@@ -77,6 +77,7 @@
 :green_circle: QRode  اتصال برای اشتراک ssh , v2ray<br>
 :green_circle: QRode  اتصال برای اشتراک ssh , v2ray<br>
 :green_circle: استفاده از درگاه پرداخت ایرانی به همراه پلاگین وردپرس<br>
+:green_circle: امکان اتصال به سیستم مدیریت اکانت IBsng<br>
 
 
 https://github.com/xpanel-cp/XPanel-SSH-User-Management <br>
